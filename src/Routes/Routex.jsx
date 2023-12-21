@@ -6,6 +6,8 @@ import SignIn from "../components/page/SignIn/SignIn";
 import SignUp from "../components/page/SignUp/SignUp";
 import ErrorPage from './../components/page/ErrorPage/ErrorPage';
 import PrivateRoutes from "./PrivateRoutes";
+import Contact from "../components/page/Contact/Contact";
+import About from "../components/page/About/About";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element:<Home></Home>,
+                element: <Home></Home>,
             },
             {
                 path: '/signin',
@@ -29,7 +31,15 @@ const router = createBrowserRouter([
                 path: 'dashboard',
                 element: <PrivateRoutes><DashboardHome></DashboardHome></PrivateRoutes>
             },
-            
+            {
+                path: 'about',
+                element: <About></About>
+            },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
+
         ],
     },
 ]);

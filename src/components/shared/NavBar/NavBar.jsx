@@ -28,7 +28,12 @@ const NavBar = () => {
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[white] rounded-box w-52">
                                     <NavLink to="/">Home</NavLink>
                                     <NavLink to="/about">About</NavLink>
-                                    <NavLink to="/dashboard">Dashboard</NavLink>
+                                    {
+                                        user?.email ?
+                                            <>
+                                                <NavLink to="/dashboard">Dashboard</NavLink>
+                                            </> : ''
+                                    }
                                     <NavLink to="/contact">Contact</NavLink>
                                 </ul>
                             </nav>
@@ -39,8 +44,8 @@ const NavBar = () => {
                         <ul className="menu menu-horizontal flex items-center">
                             <nav className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
                                 <NavLink to="/">Home</NavLink>
-                                <NavLink to="/about">About</NavLink>
                                 <NavLink to="/dashboard">Dashboard</NavLink>
+                                <NavLink to="/about">About</NavLink>
                                 <NavLink to="/contact">Contact</NavLink>
                             </nav>
                         </ul>
