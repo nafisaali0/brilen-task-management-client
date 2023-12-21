@@ -4,12 +4,14 @@ import Home from "../components/page/Home/Home";
 import DashboardHome from "../components/page/Dashboard/DashboardHome/DashboardHome";
 import SignIn from "../components/page/SignIn/SignIn";
 import SignUp from "../components/page/SignUp/SignUp";
+import ErrorPage from './../components/page/ErrorPage/ErrorPage';
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                element: <DashboardHome></DashboardHome>
+                element: <PrivateRoutes><DashboardHome></DashboardHome></PrivateRoutes>
             },
             
         ],

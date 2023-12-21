@@ -87,11 +87,11 @@ const SignUp = () => {
                         </div>
                         <div className="flex gap-2 md:gap-5 lg:gap-10 items-center my-10">
                             <div className="relative z-0 group">
-                                <button type="submit" className="text-white md:w-full  bg-black  font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-cent">SIGN UP</button>
+                                <button type="submit" className="text-white md:w-full  bg-[#8C52FF] font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-cent">SIGN UP</button>
                             </div>
                             <div className="relative z-0 group">
                                 <Link to={'/signin'}>
-                                    <button className="text-white md:w-full  bg-black  font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">SIGN IN</button>
+                                    <button className="text-white md:w-full  bg-[#8C52FF]  font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">SIGN IN</button>
                                 </Link>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bgImage from '../../../assets/image/Background/bg-3.jpg'
 import image from '../../../assets/image/Background/image-remove-1.png'
 const Banner = () => {
@@ -9,7 +10,7 @@ const Banner = () => {
                         <div className="flex-1 lg:w-1/2 lg:text-left">
                             <h1 className="mb-5 text-5xl font-bold">Save time and get more done</h1>
                             <p className="mb-5">Get everyone working in a single platform designed to manage any type of work.</p>
-                            <button className="btn bg-black text-white">Explore</button>
+                            <Link to="/signin"><button className="btn bg-black text-white">Explore</button></Link>
                         </div>
                         <div className='flex-1'>
                             <img className='w-full' src={image} alt="Large Image" />
