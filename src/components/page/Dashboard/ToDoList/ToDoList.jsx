@@ -8,7 +8,7 @@ const ToDoList = () => {
     const [changeTask, setchangeTask] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tasks?email=${user?.email}`)
+        fetch(`https://brilen-task-management-server.vercel.app/tasks?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setTaskList(data),
@@ -21,7 +21,7 @@ const ToDoList = () => {
             <div className="container mx-auto my-5">
                 <div className='text-3xl font-bold my-5'>
                     <h2 >Your Task</h2>
-                    <span className='text-lg font-bold'>After Create Task Do Refresh</span>
+                    <span className='text-lg font-bold'>After Create && Update Task Do Refresh</span>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-24">
                     <div>

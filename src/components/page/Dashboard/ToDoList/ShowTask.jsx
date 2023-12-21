@@ -21,7 +21,7 @@ const ShowTask = ({ eachTask, tasks, setchangeTask }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/tasks/${_id}`, {
+                fetch(`https://brilen-task-management-server.vercel.app/tasks/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -58,7 +58,7 @@ const ShowTask = ({ eachTask, tasks, setchangeTask }) => {
         // console.log(newTask)
 
         // sent update productinfo to server
-        fetch(`http://localhost:5000/tasks/${_id}`, {
+        fetch(`https://brilen-task-management-server.vercel.app/tasks/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

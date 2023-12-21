@@ -21,7 +21,7 @@ const CreateTask = () => {
         const newTask = { title, task, date, owner_name, owner_image, email }
         console.log(newTask)
 
-        fetch('http://localhost:5000/tasks', {
+        fetch('https://brilen-task-management-server.vercel.app/tasks', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
